@@ -21,75 +21,127 @@
         </a>
     </div>
 
-    <section id="details" class="card">
-        <h2>Giveaway Details</h2>
-        <p><strong>Prize:</strong> iPhone 16 Pro Max</p>
-        <p><strong>Entry Fee:</strong> ₹499</p>
-        <p><strong>Winner Announcement:</strong> February 28, 2026</p>
+    <section id="details">
+        <div class="card">
+            <h2>Giveaway Details</h2>
+            <p><strong>Prize:</strong> iPhone 16 Pro Max</p>
+            <p><strong>Entry Fee:</strong> ₹499</p>
+            <p><strong>Number of Winners:</strong> 1</p>
+            <p><strong>Winner Announcement:</strong> February 28, 2026</p>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step card">
+                <h3>Step 1</h3>
+                <p>Pay ₹499 via UPI</p>
+            </div>
+            <div class="step card">
+                <h3>Step 2</h3>
+                <p>Fill out the entry form</p>
+            </div>
+            <div class="step card">
+                <h3>Step 3</h3>
+                <p>Winner selected fairly and announced</p>
+            </div>
+        </div>
     </section>
 
     <section id="entry">
         <h2>Enter the Giveaway</h2>
         <form id="entry-form">
             <div class="form-group">
-                <label>Name</label>
+                <label for="name">Name</label>
                 <input type="text" id="name" required>
             </div>
             <div class="form-group">
-                <label>Mobile Number</label>
+                <label for="mobile">Mobile Number</label>
                 <input type="tel" id="mobile" required>
             </div>
             <div class="form-group">
-                <label>UPI Transaction ID <a href="Transaction id.png" target="_blank">?</a></label>
-                <input type="text" id="upi-id" required placeholder="12 Digit ID">
+                <label for="upi-id">
+                    UPI Transaction ID 
+                    <a href="Transaction id.png" target="_blank" class="help-icon" title="Where to find Transaction ID?">?</a>
+                </label>
+                <input type="text" id="upi-id" required placeholder="Enter 12-digit ID">
             </div>
             <button type="submit" class="gold-button">Submit Entry</button>
         </form>
 
-        <div id="payment" style="text-align: center; margin-top: 20px;">
+        <div id="payment">
             <h3>Payment Details</h3>
             <p><strong>UPI ID:</strong> Q258026703@ybl</p>
-            <img src="qr.jpg" alt="QR Code" width="250">
+            <div class="qr-container">
+                <h3>Scan to Pay</h3>
+                <img src="qr.jpg" alt="Payment QR Code" width="250">
+            </div>
         </div>
     </section>
 
-    <div class="refer-card" style="background: linear-gradient(135deg, #ffcc00 0%, #ff6600 100%); padding: 30px; border-radius: 20px; text-align: center; margin: 30px auto; max-width: 450px; border: 4px solid #fff; color: #000;">
-        <h2>🎁 REFER & WIN!</h2>
-        <p>Share for <span style="background: #000; color: #fff; padding: 2px 5px;">UPTO 70% CASHBACK</span></p>
-        <a href="https://api.whatsapp.com/send?text=Check this iPhone 16 Pro Max Giveaway! Join here: https://officialgiveawayin.github.io/Official-Giveaway-in/" target="_blank">
-            <button style="background: #25D366; color: white; padding: 15px; border-radius: 50px; width: 100%; font-weight: bold; border: none; cursor: pointer;">🚀 SHARE ON WHATSAPP</button>
+    <section class="card">
+        <h2>Previous Winners</h2>
+        <ul>
+            <li>Rahul Biswas – Kolkata</li>
+            <li>Manish Paswan – Jharkhand</li>
+            <li>Neha P. – Delhi</li>
+        </ul>
+        <small>*Actual winners announced after draw.</small>
+    </section>
+
+    <div class="refer-card" style="background: linear-gradient(135deg, #ffcc00 0%, #ff6600 100%); padding: 30px; border-radius: 20px; text-align: center; margin: 30px auto; max-width: 450px; border: 4px solid #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.3); color: #000;">
+        <h2 style="font-size: 2rem; margin-bottom: 10px; text-transform: uppercase; font-weight: 900;">🎁 REFER & WIN!</h2>
+        <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 20px;">Share with friends for <span style="font-size: 1.5rem; color: #fff; background: #000; padding: 2px 8px; border-radius: 5px;">UPTO 70% CASHBACK</span></p>
+        
+        <a href="https://api.whatsapp.com/send?text=Hey! 🔥 Check out this iPhone 16 Pro Max Giveaway! Just pay ₹499 and win big! Join here: https://salimbiswas212-hue.github.io/Rs499-Iphone-17pro-max-giveaway/" target="_blank" style="text-decoration: none;">
+            <button class="refer-btn" style="background-color: #25D366; border: none; color: white; padding: 15px 35px; border-radius: 50px; font-size: 1.3rem; font-weight: 900; cursor: pointer; width: 100%;">
+                🚀 SHARE ON WHATSAPP
+            </button>
         </a>
     </div>
-    <section class="reviews-animated-section">
-    <h2>Our Happy Winners! ⭐⭐⭐⭐⭐</h2>
-    <div class="reviews-container">
-        <div class="review-item">
-            <p>"Just received my iPhone 16 Pro Max! Can't believe it's real. Thank you Lucky499!"</p>
-            <strong>- Priya Sharma, Delhi</strong>
+
+     <section class="review-section">
+        <h2 class="section-title">Happy Winners ⭐⭐⭐⭐⭐</h2>
+        <div class="review-slider">
+            <div class="review-track">
+                <div class="review-card">
+                    <p>"iPhone 16 Pro Max-ta hate pelam! Thank you Lucky499, shotti bishwash korte parchi na."</p>
+                    <div class="reviewer-info">
+                        <strong>Rahul Biswas</strong>
+                        <span>Kolkata, WB</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p>"Payment process khub-i fast chilo. Telegram group-e prottekta update deya hoy."</p>
+                    <div class="reviewer-info">
+                        <strong>Manish Paswan</strong>
+                        <span>Jharkhand</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p>"Ami age bhabini je jitte parbo, kintu eita ekdom real! Highly recommended."</p>
+                    <div class="reviewer-info">
+                        <strong>Neha P.</strong>
+                        <span>Delhi</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <p>"iPhone 16 Pro Max-ta hate pelam! Thank you Lucky499, shotti bishwash korte parchi na."</p>
+                    <div class="reviewer-info">
+                        <strong>Rahul Biswas</strong>
+                        <span>Kolkata, WB</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="review-item">
-            <p>"Payment process was smooth, and the customer support is great. Highly recommended."</p>
-            <strong>- Rohan Singh, Mumbai</strong>
-        </div>
-        <div class="review-item">
-            <p>"I've tried many giveaways, but this one actually works. Waiting for the next one!"</p>
-            <strong>- Fatima Khan, Bangalore</strong>
-        </div>
-        <div class="review-item">
-            <p>"Initially skeptical, but their Telegram group convinced me. Happy with the experience."</p>
-            <strong>- Amit Kumar, Hyderabad</strong>
-        </div>
-        <div class="review-item">
-            <p>"The best ₹499 I've ever spent! Excited for the winner announcement."</p>
-            <strong>- Sneha Reddy, Chennai</strong>
-        </div>
-    </div>
-    </section>
-      <footer style="text-align: center; padding: 20px; color: #ccc; border-top: 1px solid #333;">
+     </section>
+
+    <footer style="text-align: center; padding: 30px; color: #ccc; border-top: 1px solid #333; margin-top: 20px;">
         <p>&copy; 2026 Lucky499 Giveaway. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-    </html>
-    
+                                   </html>
+            
