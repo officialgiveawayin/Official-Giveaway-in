@@ -195,6 +195,39 @@
     </footer>
 
     <script src="script.js"></script>
+<div id="live-toast" style="position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #ff6600, #ff9900); color: #fff; padding: 12px 25px; border-radius: 50px; display: none; font-family: 'Poppins', sans-serif; z-index: 9999; box-shadow: 0 10px 30px rgba(255, 102, 0, 0.5); font-size: 14px; align-items: center; border: 1px solid rgba(255,255,255,0.2);">
+    <span style="margin-right: 10px;">🔥</span> <span id="winner-name" style="font-weight: bold;"></span> just joined the giveaway!
+</div>
+
+<script>
+    (function() {
+        const names = ["Rahul S.", "Ankit M.", "Sohail K.", "Priya D.", "Vikram J.", "Sneha R.", "Arjun V.", "Tanvir A.", "Deepak K.", "Megha S."];
+        const toast = document.getElementById('live-toast');
+        const nameSpan = document.getElementById('winner-name');
+
+        function showNotification() {
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            nameSpan.innerText = randomName;
+            toast.style.display = 'flex';
+            
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 4000); // 4 second dekhabe
+        }
+
+        // 8 theke 15 second-er moddhe random interval-e dekhabe jate real mone hoy
+        function scheduleNext() {
+            const randomDelay = Math.floor(Math.random() * (15000 - 8000 + 1) + 8000);
+            setTimeout(() => {
+                showNotification();
+                scheduleNext();
+            }, randomDelay);
+        }
+
+        scheduleNext();
+    })();
+            </script>
+    
 </body>
                                    </html>
             
