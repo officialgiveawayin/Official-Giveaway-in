@@ -330,7 +330,7 @@ footer a:hover {
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 10% auto;
   padding: 25px;
   border-radius: 12px;
@@ -345,7 +345,7 @@ footer a:hover {
   position: absolute;
   right: 15px;
   top: 10px;
-  color: #333;
+  color: #000000;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
