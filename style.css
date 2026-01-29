@@ -265,32 +265,6 @@ footer a:hover {
     transform: translateY(-3px);
          }
     
-.reviews-section {
-    background: #1a1a1a;
-    border: 1px solid #ffd700;
-    margin-top: 20px;
-}
-
-.review {
-    border-bottom: 1px dotted #444;
-    padding: 15px 0;
-    text-align: left;
-}
-
-.review:last-child {
-    border-bottom: none;
-}
-
-.review p {
-    font-style: italic;
-    color: #eee;
-    margin-bottom: 5px;
-}
-
-.review strong {
-    color: #ffd700;
-    font-size: 0.9rem;
-}
 .reviews-animated-section {
     background: linear-gradient(135deg, #1e1e1e 0%, #0a0a0a 100%);
     padding: 40px 20px;
