@@ -264,71 +264,58 @@ footer a:hover {
     color: #0088cc;
     transform: translateY(-3px);
          }
-    
-.reviews-animated-section {
-    background: linear-gradient(135deg, #1e1e1e 0%, #0a0a0a 100%);
-    padding: 40px 20px;
-    margin-top: 30px;
-    border-top: 3px solid #ffd700;
-    border-bottom: 3px solid #ffd700;
+    .review-section {
+    padding: 50px 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.section-title {
     text-align: center;
-    overflow: hidden; /* Important for animation */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.reviews-animated-section h2 {
     color: #ffd700;
-    font-size: 2.2rem;
     margin-bottom: 30px;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
-.reviews-container {
+.review-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.review-track {
     display: flex;
-    white-space: nowrap; /* Keep items in a single line */
-    animation: scrollReviews 30s linear infinite; /* Animation duration and speed */
-    padding: 10px 0;
+    width: calc(350px * 6); /* Adjust based on card number */
+    animation: scroll 20s linear infinite;
 }
 
-.review-item {
-    flex: 0 0 auto; /* Prevent items from shrinking */
-    background: #2a2a2a;
-    border: 1px solid #444;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0 15px; /* Space between reviews */
-    width: 300px; /* Fixed width for each review */
-    min-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    text-align: left;
-    transition: transform 0.3s ease-in-out;
+.review-card {
+    width: 300px;
+    background: #1a1a1a;
+    border: 1px solid #ffd700;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 0 15px;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.1);
 }
 
-.review-item:hover {
-    transform: translateY(-5px);
-}
-
-.review-item p {
+.review-card p {
+    color: #eee;
     font-style: italic;
-    color: #e0e0e0;
-    margin-bottom: 10px;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-.review-item strong {
+.reviewer-info strong {
     color: #ffd700;
-    font-size: 1rem;
     display: block;
-    margin-top: 10px;
 }
 
-/* Keyframe animation for scrolling */
-@keyframes scrollReviews {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-100%); /* Scrolls leftwards */
-    }
-    }
-    
+.reviewer-info span {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-330px * 3)); } /* Adjust based on cards */
+}
