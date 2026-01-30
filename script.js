@@ -1,39 +1,27 @@
 // Loader
-window.onload = function(){
+window.onload=()=>{
 document.getElementById("loader").style.display="none";
+setTimeout(()=>document.getElementById("popup").style.display="block",2000);
 };
 
-// Countdown
-function updateCountdown(){
-const end=new Date("February 28, 2026 23:59:59").getTime();
-const now=new Date().getTime();
-const diff=end-now;
-
-if(diff<0){
-document.getElementById("countdown").innerText="GIVEAWAY CLOSED";
-return;
-}
-const d=Math.floor(diff/(1000*60*60*24));
-const h=Math.floor((diff/(1000*60*60))%24);
-const m=Math.floor((diff/(1000*60))%60);
-const s=Math.floor((diff/1000)%60);
-
-document.getElementById("countdown").innerText=
-`${d}d ${h}h ${m}m ${s}s`;
-}
-setInterval(updateCountdown,1000);
-updateCountdown();
+// Popup
+function closePopup(){document.getElementById("popup").style.display="none";}
 
 // Scroll
 function scrollToPay(){
 document.getElementById("payment").scrollIntoView({behavior:"smooth"});
 }
 
-// Modals
-function openModal(id){document.getElementById(id).style.display="block";}
-function closeModal(id){document.getElementById(id).style.display="none";}
+// Countdown
+const end=new Date("February 28, 2026 23:59:59").getTime();
+setInterval(()=>{
+const now=new Date().getTime(),d=end-now;
+if(d<0)return;
+document.getElementById("countdown").innerText=
+`${Math.floor(d/86400000)}d ${Math.floor(d/3600000)%24}h ${Math.floor(d/60000)%60}m`;
+},1000);
 
-// Theme
-function toggleTheme(){
-document.body.classList.toggle("light");
-}
+// Sound click
+document.querySelectorAll(".sound-btn").forEach(btn=>{
+btn.onclick=()=>document.getElementById("clickSound").play();
+});
