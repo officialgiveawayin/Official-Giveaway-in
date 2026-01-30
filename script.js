@@ -1,74 +1,39 @@
-// Simple form validation and submission handling
-document.getElementById('entry-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-    
-    const name = document.getElementById('name').value.trim();
-    const mobile = document.getElementById('mobile').value.trim();
-    const upiId = document.getElementById('upi-id').value.trim();
-    
-    if (!name || !mobile || !upiId) {
-        alert('Please fill in all fields.');
-        return;
-    }
-    
-    // Basic mobile number validation (Indian format)
-    const mobileRegex = /^[6-9]\d{9}$/;
-    if (!mobileRegex.test(mobile)) {
-        alert('Please enter a valid 10-digit mobile number starting with 6-9.');
-        return;
-    }
-    
-    // Simulate submission (in a real app, send to server)
-    alert('Thank you for entering! Your entry has been submitted. Winner will be announced on February 28, 2026.');
-    
-    // Reset form
-    document.getElementById('entry-form').reset();
-});
+// Loader
+window.onload = function(){
+document.getElementById("loader").style.display="none";
+};
 
-// CTA button scrolls to entry form
-document.getElementById('cta-button').addEventListener('click', function() {
-    document.getElementById('entry').scrollIntoView({ behavior: 'smooth' });
-});
-const drawTime = new Date("2026-02-28T18:00:00").getTime();
+// Countdown
+function updateCountdown(){
+const end=new Date("February 28, 2026 23:59:59").getTime();
+const now=new Date().getTime();
+const diff=end-now;
 
-setInterval(() => {
-  const now = new Date().getTime();
-  const diff = drawTime - now;
+if(diff<0){
+document.getElementById("countdown").innerText="GIVEAWAY CLOSED";
+return;
+}
+const d=Math.floor(diff/(1000*60*60*24));
+const h=Math.floor((diff/(1000*60*60))%24);
+const m=Math.floor((diff/(1000*60))%60);
+const s=Math.floor((diff/1000)%60);
 
-  if (diff <= 0) {
-    document.getElementById("countdown").innerText =
-      "Draw closed. Winner will be announced soon.";
-    return;
-  }
+document.getElementById("countdown").innerText=
+`${d}d ${h}h ${m}m ${s}s`;
+}
+setInterval(updateCountdown,1000);
+updateCountdown();
 
-  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((diff / (1000 * 60)) % 60);
-  const s = Math.floor((diff / 1000) % 60);
-
-  document.getElementById("countdown").innerText =
-    `Draw ends in: ${d}d ${h}h ${m}m ${s}s`;
-}, 1000);
-// About Us Modal Script
-var modal = document.getElementById("aboutModal");
-var btn = document.getElementById("aboutBtn");
-var span = document.getElementsByClassName("close")[0];
-
-if(btn) {
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
+// Scroll
+function scrollToPay(){
+document.getElementById("payment").scrollIntoView({behavior:"smooth"});
 }
 
-if(span) {
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-}
+// Modals
+function openModal(id){document.getElementById(id).style.display="block";}
+function closeModal(id){document.getElementById(id).style.display="none";}
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-                            }
-                        
+// Theme
+function toggleTheme(){
+document.body.classList.toggle("light");
+}
